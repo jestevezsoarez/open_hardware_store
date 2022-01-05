@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">  
+                <img src="img/open-576209_640.png" id="logo">                
+            </div>
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                            <img src="img/cart2.png" id="img-carrito">
+                            <div id="carrito">
+                                    
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <table id="total-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+
+                                            </tr>
+                                        </thead>                                        
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    </header>
+
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                    <div class="six columns">
+                        <div class="contenido-hero">                                
+                                <h2>Tu tienda de componentes hardware</h2>
+                                <p class="yellow">Envíos gratis dentro de Montevideo a partir de U$S 200.</p>
+                                <form action="#" id="busqueda" method="post" class="formulario">
+                                    <input class="u-full-width" type="text" placeholder="¿Que componente estas buscando?" id="buscador">
+                                    <input id="submit-buscador" class="submit-buscador">
+                                </form>
+                        </div>
+                    </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <p>Envíos a todo el país<br>
+                        Demora 2 días hábiles</p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <p>Productos con Garantía <br>
+                        Todos nuestros productos cuentan con 1 año de garantía</p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <p>Aplicación desarrollada con <br>
+                            Vanilla JS HTML5 y CSS</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-productos" class="container">
+        <h1 id="encabezado" class="encabezado">Productos Disponibles</h1>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/tarjeta_video.jpg" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Tarjeta de Video NVidia GeForce 10</h4>
+                        <p>Series GT 1030 2GB</p>                        
+                        <p class="stock">Stock: 10 unidades</p>
+                        <p class="precio">U$S 190  <span class="u-pull-right ">U$S 170</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/intel_i5.jpg" class="imagen-producto u-full-width">
+                        <div class="info-card">
+                            <h4>Procesador Intel I5</h4>
+                            <p>10400 10ma generación 4.3 GHZ</p>
+                            <p class="stock">Stock: 50 unidades</p>
+                            <p class="precio">U$S 380  <span class="u-pull-right ">U$S 320</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/amd_ryzen.jpg" class="imagen-producto u-full-width">
+                        <div class="info-card">
+                            <h4>Procesador AMD Ryzen</h4>
+                            <p>6 Núcleos Socket Am4</p>
+                            <p class="stock">Stock: 50 unidades</p>
+                            <p class="precio">U$S 400  <span class="u-pull-right ">U$S 380</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/disco_externo.jpg" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Disco Duro Externo</h4>
+                        <p>Western Digital 1TB</p>
+                        <p class="stock">Stock: 15 unidades</p>
+                        <p class="precio">U$S 80  <span class="u-pull-right ">U$S 71</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/motherboard.jpg" class="imagen-producto u-full-width">
+                        <div class="info-card">
+                            <h4>Motherboard ASROCK</h4>
+                            <p>Am4 Ryzen</p>
+                            <p class="stock">Stock: 25 unidades</p>
+                            <p class="precio">U$S 150  <span class="u-pull-right ">U$S 95</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/hdd.png" class="imagen-producto u-full-width">
+                        <div class="info-card">
+                            <h4>Disco Duro Seagate</h4>
+                            <p>2 TB</p>
+                            <p class="stock">Stock: 100 unidades</p>
+                            <p class="precio">U$S 110  <span class="u-pull-right ">U$S 90</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/pc_tower.png" class="imagen-producto u-full-width">
+                    <div class="info-card">
+                        <h4>Torre PC</h4>
+                        <p>Gaming</p>
+                        <p class="stock">Stock: 20 unidades</p>
+                        <p class="precio">U$S 60  <span class="u-pull-right ">U$S 50</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/teclado.png" class="imagen-producto u-full-width">
+                        <div class="info-card">
+                            <h4>Teclado Bluetooth</h4>
+                            <p>Logitech Blanc</p>
+                            <p class="stock">Stock: 35 unidades</p>
+                            <p class="precio">U$S 90  <span class="u-pull-right ">U$S 60</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/monitor.png" class="imagen-producto u-full-width">
+                        <div class="info-card">
+                            <h4>Monitor Gamer Led 24"</h4>
+                            <p>Acer</p>
+                            <p class="stock">Stock: 100 unidades</p>
+                            <p class="precio">U$S 400  <span class="u-pull-right ">U$S 350</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/memoria.jpg" class="imagen-producto u-full-width">
+                        <div class="info-card">
+                            <h4>Memoria RAM 8 GB </h4>
+                            <p>Kingston DDR4</p>
+                            <p class="stock">Stock: 1000 unidades</p>
+                            <p class="precio">U$S 79  <span class="u-pull-right ">U$S 60</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/impresora.jpg" class="imagen-producto u-full-width">
+                            <div class="info-card">
+                                <h4>Impresora HP</h4>
+                                <p>Laser con Scanner</p>
+                                <p class="stock">Stock: 5 unidades</p>
+                                <p class="precio">U$S 298  <span class="u-pull-right ">U$S 230</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/auriculares.jpg" class="imagen-producto u-full-width">
+                            <div class="info-card">
+                                <h4>Auriculares Marshall</h4>
+                                <p>Con cancelación de ruido y micrófono</p>
+                                <p class="stock">Stock: 9 unidades</p>
+                                <p class="precio">U$S 200 <span class="u-pull-right ">U$S 189</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+            </div> <!--.row-->
+    </div>  
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                    <div >
+                        <p>&copy; Javier Estévez - Enero 2022 - Montevideo, Uruguay</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
