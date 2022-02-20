@@ -189,3 +189,8 @@ ul {
 .yellow {
     color: yellow;
 }
+
+.footer .aviso {
+    font-size: small;
+    color: green;
+}
