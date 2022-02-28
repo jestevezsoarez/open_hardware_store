@@ -7,6 +7,15 @@ const totalCarrito = document.querySelector('#total-carrito thead');
 let articulosCarrito = [];
 
 
+// Verificamos si tenemos algún valor auto guardado
+// (esto solo ocurrirá si la página es recargada accidentalmente)
+if (sessionStorage.getItem("compras")) {
+  // Restaura el contenido al campo de texto
+  obtenerCarritoSessionStorage();
+  // Muestro en el carrito los productos recuperados de SessionStorage
+  carritoHTML();
+}
+
 cargarEventlisteners();
 function cargarEventlisteners() {
     // Cuando agregas un producto presionando "Agregar al Carrito";
@@ -17,8 +26,9 @@ function cargarEventlisteners() {
 
     // Vaciar el carrito
     vaciarCarritoBtn.addEventListener('click', () => {
-        articulosCarrito = [];
+        articulosCarrito = [];        
         limpiarHTML();
+        guardarCarritoSessionStorage();
     });
 }
 
@@ -133,7 +143,7 @@ function calcularTotal() {
         
         total += parseInt(producto.precio.split(' ')[1]) * parseInt(producto.cantidad);        
     } );
-    console.log(total);
+    //console.log(total);
     const row = document.createElement('tr');
     row.innerHTML = `
         <th>Total: </th>
@@ -141,4 +151,19 @@ function calcularTotal() {
     `;
     totalCarrito.appendChild(row);
 
+    guardarCarritoSessionStorage();
+
+}
+
+function guardarCarritoSessionStorage() {
+
+    // Se guarda en localStorage despues de convertir el carrito a un objeto de texto JSON 
+    sessionStorage.setItem('compras', JSON.stringify(articulosCarrito));
+
+}
+
+function obtenerCarritoSessionStorage() {
+
+    articulosCarrito = JSON.parse(sessionStorage.getItem('compras'));
+    //console.log(articulosCarrito);
 }
