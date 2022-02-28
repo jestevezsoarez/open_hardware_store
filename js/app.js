@@ -76,6 +76,13 @@ function leerDatosProducto(producto) {
 
     //console.log(articulosCarrito);
 
+    // Muestra alerta personalizada
+    Swal.fire(
+      'Producto agregado al carrito!',
+      `${infoProducto.titulo}`,
+      'success'
+    )
+
     carritoHTML();
 }
 
@@ -133,4 +140,5 @@ function calcularTotal() {
         <th>U$S ${total}</th>
     `;
     totalCarrito.appendChild(row);
+
 }
